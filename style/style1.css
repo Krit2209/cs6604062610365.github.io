@@ -1,0 +1,36 @@
+body{
+  display:flex;
+  align-items:center;
+  background-color:white;
+  
+}
+.grid{
+  display:grid;
+  gap:2px;
+  border:1px solid black;
+  padding:5px;
+}
+.row {
+  display: flex;
+  gap: 5px;
+}
+.box {
+  align-items:center;
+  border: 1px solid black;
+}
+.box-a,.box-b {
+  font-size:24px;
+}
+.box-c{
+  grid-column:span 2;
+  font-size:24px;
+}
+.row:hover .box {
+  background-color: orange;
+  color: white;
+}
+.row2:hover .box {
+  background-color: orange;
+  color: white;
+}
+
