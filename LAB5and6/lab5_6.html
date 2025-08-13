@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radio Combo Example</title>
+</head>
+<body>
+<h3>เลือกหมวดหมู่</h3>
+<form id="myForm">
+    <input type="radio" name="r" value="cars" id="carsRadio"><label for="carsRadio">Cars</label>
+    <input type="radio" name="r" value="days" id="daysRadio"><label for="daysRadio">Days</label>
+    <input type="radio" name="r" value="jobs" id="jobsRadio"><label for="jobsRadio">Jobs</label>
+    <hr>
+    <select id="combo1" style="width:150px">
+        <option value="">Choose radio</option>
+    </select>
+</form>
+
+<script>
+    let cars = ['Audi', 'BMW', 'Ford', 'Opel', 'Toyota'];
+    let days = ['Monday', 'Wednesday', 'Friday'];
+    let jobs = ['Engineer', 'Salesman'];
+
+    function updateCombo(list) {
+        let combo = document.getElementById("combo1");
+        combo.innerHTML = ""; 
+        list.forEach(item => {
+            let option = document.createElement("option");
+            option.value = item;
+            option.textContent = item;
+            combo.appendChild(option);
+        });
+    }
+
+    window.onload = function() {
+        document.getElementById("carsRadio").onclick = function() { updateCombo(cars); };
+        document.getElementById("daysRadio").onclick = function() { updateCombo(days); };
+        document.getElementById("jobsRadio").onclick = function() { updateCombo(jobs); };
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+function changeColor(inputId) {
+    var input = document.getElementById(inputId);
+
+    if (input.value.trim() !== "") {
+        input.style.color = "green";
+    } else {
+        input.style.color = "black"; 
+    }
+}
+</script>
+</head>
+<body>
+
+Name: <input type="text" id="name" onblur="changeColor('name')"><br>
+Age: <input type="text" id="age" onblur="changeColor('age')"><br>
+Birthdate: <input type="text" id="birthdate" onblur="changeColor('birthdate')"><br>
+
+</body>
+</html>

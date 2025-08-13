@@ -67,7 +67,8 @@ body {
 #lab1-toggle:checked + .dropdown-toggle + .dropdown-menu,
 #lab2-toggle:checked + .dropdown-toggle + .dropdown-menu, 
 #lab3-toggle:checked + .dropdown-toggle + .dropdown-menu,
-#lab4-toggle:checked + .dropdown-toggle + .dropdown-menu 
+#lab4-toggle:checked + .dropdown-toggle + .dropdown-menu,
+#lab5-toggle:checked + .dropdown-toggle + .dropdown-menu
 
 {
   display: block;
